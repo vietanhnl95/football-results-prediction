@@ -1,0 +1,54 @@
+main:
+    db_url: postgresql://postgres@localhost:5432/football
+    scope:
+        leagues:
+            # England
+            - 39
+            - 40
+            - 45
+            - 48
+            # Spain
+            - 140
+            - 141
+            - 143
+        season_first: 2015
+        season_last: 2021
+    max_requests_daily: None
+    
+
+fixtures:
+    # mode: backfill, append, replace
+    mode: backfill
+
+    # db destination
+    destination:
+        schema: football_api
+        table_name: fixtures
+        replace: True
+
+leagues:
+    # mode: backfill, append, replace
+    mode: backfill
+
+    # db destination
+    destination:
+        schema: football_api
+        table_name: leagues
+
+lineups:
+    # mode: backfill, append, replace
+    mode: backfill
+
+    # db destination
+    destination:
+        schema: football_api
+        table_name: lineups
+
+teams:
+    # mode: backfill, append, replace
+    mode: backfill
+
+    # db destination
+    destination:
+        schema: football_api
+        table_name: teams
