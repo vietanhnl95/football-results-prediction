@@ -133,3 +133,4 @@ dmypy.json
 /player_data
 /*venv
 *.ipynb
+*test
