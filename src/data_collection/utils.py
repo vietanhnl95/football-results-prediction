@@ -17,7 +17,7 @@ def create_db_connection(db_url):
     except Exception as e:
         print(e)
         return None
-        
+
 
 def get_api_response(url, querystring=None):
     # get secrets from envionment
@@ -38,7 +38,7 @@ def get_api_response(url, querystring=None):
         print('API request successfully')
         return json.loads(response.text)
     else:
-        print(status_code)
+        print(response.status_code)
         return None
 
 
